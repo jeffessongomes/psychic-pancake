@@ -1,5 +1,7 @@
 import {createGlobalStyle} from 'styled-components';
 
+import Bg from '../assets/img/bg.png';
+
 export default createGlobalStyle`
   *{
     padding: 0;
@@ -12,6 +14,16 @@ export default createGlobalStyle`
     color: #FFF;
     -webkit-font-smoothing: antialiased;
   }
+
+  #root{
+    background: url(${Bg});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+  }
+
   button{
     cursor: pointer;
   }

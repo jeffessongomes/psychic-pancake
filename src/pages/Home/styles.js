@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerHome = styled.div`
+export const Container = styled.div`
   .bannerStart{
     background: #FECA0B;
     margin-top: 100px;
@@ -22,6 +22,10 @@ export const ContainerHome = styled.div`
       color: #383A3C;
     }
   }
+`;
+
+export const ContainerHome = styled.div`
+  padding: 0 20px;
 
   .Home--option{
     margin-top: 20px;

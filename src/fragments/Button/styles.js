@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerButton = styled.div`
   background: #FECA0B;
-  width: 266px;
+  width: 100%;
   height: 80px;
 
   display: flex;
