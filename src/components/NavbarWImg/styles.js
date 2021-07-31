@@ -28,6 +28,7 @@ export const Nav = styled.nav`
       font-weight: 900;
       line-height: 12px;
       border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
       padding: 11px 15px;
 
@@ -36,12 +37,6 @@ export const Nav = styled.nav`
       @media only screen and (max-width: 380px) {
         font-size: 12px;
       }
-    }
-
-    img {
-      top: 10px;
-      position: absolute;
-      border: 2px solid #feca0b;
     }
   }
 `;

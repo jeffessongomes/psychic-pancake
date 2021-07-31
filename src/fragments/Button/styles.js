@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ContainerButton = styled.div`
-  background: #FECA0B;
+  background: #feca0b;
   width: 100%;
   height: 80px;
 
@@ -9,17 +9,15 @@ export const ContainerButton = styled.div`
   justify-content: center;
   align-items: center;
 
-
-  a{
+  a {
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
     font-size: 18px;
     line-height: 30px;
     text-align: center;
-    color: #383A3C;
+    color: #383a3c;
   }
 
   border-radius: 5px;
-
 `;

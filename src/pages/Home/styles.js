@@ -1,14 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-  .bannerStart{
-    background: #FECA0B;
+  .bannerStart {
+    background: #feca0b;
     margin-top: 100px;
 
     display: flex;
     justify-content: center;
 
-    p{
+    p {
       padding: 21px 80px;
       font-family: Roboto;
       font-style: normal;
@@ -19,7 +19,7 @@ export const Container = styled.div`
 
       margin: 0;
 
-      color: #383A3C;
+      color: #383a3c;
     }
   }
 `;
@@ -27,7 +27,7 @@ export const Container = styled.div`
 export const ContainerHome = styled.div`
   padding: 0 20px;
 
-  .Home--option{
+  .Home--option {
     margin-top: 20px;
     display: flex;
     justify-content: center;

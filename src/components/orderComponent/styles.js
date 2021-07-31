@@ -1,25 +1,25 @@
 import styled from "styled-components";
 
 export const ContainerOrder = styled.div`
-  background: #FECA0B;
+  background: #feca0b;
   border-radius: 5px;
   padding: 30px 0 20px 0;
   margin-bottom: 20px;
 
-  ul{
+  ul {
     margin: 0;
 
-    li{
-      &:first-child{
+    li {
+      &:first-child {
         margin-top: 0;
       }
 
-      border-bottom: 2px solid #383A3C;
+      border-bottom: 2px solid #383a3c;
 
       margin-top: 20px;
       list-style: none;
 
-      h5{
+      h5 {
         font-family: Roboto;
         font-style: normal;
         font-weight: bold;
@@ -28,17 +28,17 @@ export const ContainerOrder = styled.div`
 
         text-align: center;
 
-        color: #383A3C;
+        color: #383a3c;
       }
 
-      .containerPrice{
+      .containerPrice {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
         padding: 0 0 0 20px;
 
-        strong{
+        strong {
           font-family: Roboto;
           font-style: normal;
           font-weight: 500;
@@ -46,31 +46,31 @@ export const ContainerOrder = styled.div`
           line-height: 14px;
           text-align: center;
 
-          color: #383A3C;
+          color: #383a3c;
         }
 
-        .containerInput{
+        .containerInput {
           display: flex;
           flex-direction: row;
 
-          input{
+          input {
             width: 50px;
             outline: none;
             border: none;
             border-radius: 0;
-            background: #383A3C;
-            color: #FFFFFF;
+            background: #383a3c;
+            color: #ffffff;
             font-weight: bold;
             text-align: center;
           }
 
-          button{
+          button {
             background: 0;
             border: none;
             font-size: 26px;
             padding: 0 20px;
 
-            &.containerInput--btn__menos{
+            &.containerInput--btn__menos {
               font-size: 32px;
             }
           }
@@ -79,8 +79,8 @@ export const ContainerOrder = styled.div`
     }
   }
 
-  .request--btn{
-    background: #383A3C;
+  .request--btn {
+    background: #383a3c;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -88,7 +88,7 @@ export const ContainerOrder = styled.div`
     line-height: 21px;
     text-align: center;
 
-    color: #FECA0B;
+    color: #feca0b;
     text-transform: uppercase;
     outline: none;
     border: none;

@@ -1,12 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import {ContainerButton} from './styles';
+import { ContainerButton } from "./styles";
 
-const Button = ({Title, path}) => (
+const Button = ({ Title, path }) => (
   <ContainerButton className="mt-4">
-    <Link to={path}>
-      {Title}
-    </Link>
+    <Link to={path}>{Title}</Link>
   </ContainerButton>
 );
 

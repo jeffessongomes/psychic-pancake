@@ -1,6 +1,6 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
-import Bg from '../assets/img/bg.png';
+import Bg from "../assets/img/bg.png";
 
 export default createGlobalStyle`
   *{
@@ -20,8 +20,7 @@ export default createGlobalStyle`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-
+    min-height: 100vh;
   }
 
   button{

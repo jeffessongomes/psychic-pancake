@@ -1,21 +1,21 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-  .container--bannerStart{
+  .container--bannerStart {
     height: 80px;
 
-    &.isFixedBanner{
+    &.isFixedBanner {
       height: 150px;
     }
 
-    .bannerStart{
-      background: #FECA0B;
+    .bannerStart {
+      background: #feca0b;
 
       display: flex;
       justify-content: center;
 
       margin-top: 80px;
-      p{
+      p {
         padding: 21px 80px;
         font-family: Roboto;
         font-style: normal;
@@ -26,16 +26,16 @@ export const Container = styled.div`
 
         margin: 0;
 
-        color: #383A3C;
+        color: #383a3c;
       }
     }
 
-    .bannerFixed{
+    .bannerFixed {
       margin-top: 0;
       top: 0;
       position: fixed;
       width: 100%;
-      border-bottom: 5px solid #383A3C;
+      border-bottom: 5px solid #383a3c;
     }
   }
 `;
@@ -45,7 +45,7 @@ export const ContainerOrder = styled.div`
 
   margin-top: 26px;
 
-  div{
+  div {
     display: flex;
     flex-direction: column;
     align-items: center;

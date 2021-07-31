@@ -6,11 +6,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -19,11 +19,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -32,11 +32,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -45,11 +45,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -58,11 +58,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -71,11 +71,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -84,11 +84,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -97,11 +97,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -110,11 +110,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -123,11 +123,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -136,11 +136,11 @@ const OrderComponent = () => (
       <li>
         <h5>Cerveja Brahma duplo 350</h5>
         <div className="containerPrice">
-          <strong>
-            R$ 12,00
-          </strong>
+          <strong>R$ 12,00</strong>
           <div className="containerInput">
-            <button className="containerInput--btn__menos" type="button">-</button>
+            <button className="containerInput--btn__menos" type="button">
+              -
+            </button>
             <input type="number" min="0" />
             <button type="button">+</button>
           </div>
@@ -153,7 +153,6 @@ const OrderComponent = () => (
         <span class="sr-only">Loading...</span>
       </div>
     </button>
-
   </ContainerOrder>
 );
 
