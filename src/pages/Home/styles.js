@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  margin-bottom: 20px;
+
   .bannerStart {
     background: #feca0b;
     margin-top: 100px;

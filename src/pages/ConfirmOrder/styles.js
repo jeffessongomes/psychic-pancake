@@ -9,5 +9,6 @@ export const Container = styled.div`
     text-align: center;
 
     margin-top: 55px;
+    padding: 0 40px;
   }
 `;

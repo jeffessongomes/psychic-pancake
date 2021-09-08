@@ -2,24 +2,36 @@ import { useEffect, useState } from "react";
 
 import { useRouteMatch } from "react-router-dom";
 
-import api from "../../services/api";
-
 import { ContainerOrder, Container } from "./styles";
 
 import OrderComponent from "../../components/orderComponent";
 
 function Order() {
-  const [data, setData] = useState({});
+  const [type, setType] = useState("");
   const [isFixed, setIsFixed] = useState(false);
   const { params } = useRouteMatch();
 
   useEffect(() => {
-    api.get(`filtro_tipo/${params.id}`).then((response) => {
-      setData(response.data);
-    });
+    switch (params.id) {
+      case "2":
+        setType("Cervejas");
+        break;
+      case "3":
+        setType("Caldos");
+        break;
+      case "4":
+        setType("Drinks");
+        break;
+      case "5":
+        setType("Cachaças");
+        break;
+      case "6":
+        setType("Petiscos");
+        break;
+      default:
+        setType("NADA FOI ENCONTRADO!");
+    }
   }, [params]);
-
-  console.log(data);
 
   useEffect(() => {
     function handleScroll() {
@@ -37,11 +49,11 @@ function Order() {
     <Container>
       <div className={`container--bannerStart ${isFixed && "isFixedBanner"}`}>
         <div className={`bannerStart ${isFixed && "bannerFixed"} `}>
-          <p>Bebidas</p>
+          <p>{type}</p>
         </div>
       </div>
       <ContainerOrder>
-        <OrderComponent />
+        <OrderComponent id={params.id} />
       </ContainerOrder>
     </Container>
   );

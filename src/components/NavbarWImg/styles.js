@@ -19,7 +19,9 @@ export const Nav = styled.nav`
 
     padding: 15px 0;
 
-    a {
+    a,
+    button {
+      border: none;
       background: #383a3c;
       color: #feca0b;
       font-family: Roboto;

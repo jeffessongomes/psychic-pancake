@@ -37,7 +37,6 @@ export const Nav = styled.nav`
         font-size: 12px;
       }
     }
-
     img {
       top: 10px;
       position: absolute;

@@ -1,24 +1,39 @@
-import NoPhotos from "../../assets/img/sem-foto.jpg";
+import { useDispatch } from "react-redux";
+import LogoBruno from "../../assets/img/logoBruno.jpg";
+import {
+  addProductToOrderAfterConfirm,
+  removeProductToOrder,
+} from "../../store/modules/order/actions";
 
 import { Container } from "./styles";
 
-const RequestComponent = () => (
-  <Container>
-    <div className="RequestComponent">
-      <div className="RequestComponent--container">
-        <h4>Mousse de maracujá</h4>
-        <div className="RequestComponent--container__info">
-          <button>-</button>
-          <span>0</span>
-          <button>+</button>
+const RequestComponent = ({ item }) => {
+  const dispatch = useDispatch();
+
+  return (
+    <Container>
+      <div className="RequestComponent">
+        <div className="RequestComponent--container">
+          <h4>{item.nome}</h4>
+          <div className="RequestComponent--container__info">
+            <button onClick={() => dispatch(removeProductToOrder([item]))}>
+              -
+            </button>
+            <span>{item.quantity}</span>
+            <button
+              onClick={() => dispatch(addProductToOrderAfterConfirm([item]))}
+            >
+              +
+            </button>
+          </div>
         </div>
+        <img src={LogoBruno} alt="Sem foto da comida" />
       </div>
-      <img src={NoPhotos} alt="Sem foto da comida" />
-    </div>
-    <div className="RequestComponent--price">
-      <span>R$ 99,99</span>
-    </div>
-  </Container>
-);
+      <div className="RequestComponent--price">
+        <span>R$ {item.preco.toFixed(2).replace(".", ",")}</span>
+      </div>
+    </Container>
+  );
+};
 
 export default RequestComponent;

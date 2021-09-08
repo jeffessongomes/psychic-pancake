@@ -8,10 +8,13 @@ import LogoTipo from "../../assets/img/logo.png";
 
 const Navbar = () => {
   const location = useLocation();
+  const [, slug, numberTable] = location.pathname.split("/");
 
   if (
-    location.pathname === "/pedido/confirmar" ||
-    location.pathname === "/verificar-codigo"
+    location.pathname === `/${slug}/${numberTable}/pedido/confirmar` ||
+    location.pathname === `/${slug}/${numberTable}/pedido/confirmar/` ||
+    location.pathname === `/${slug}/${numberTable}/` ||
+    location.pathname === `/${slug}/${numberTable}`
   ) {
     return null;
   }

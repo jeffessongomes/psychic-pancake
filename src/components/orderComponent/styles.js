@@ -104,4 +104,9 @@ export const ContainerOrder = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  .messageError {
+    font-weight: bold;
+    color: #e74c3c;
+  }
 `;
