@@ -19,7 +19,7 @@ export const Nav = styled.nav`
 
     padding: 15px 0;
 
-    a {
+    a, .callWaiter--button {
       z-index: 98;
 
       background: #383a3c;
@@ -30,7 +30,7 @@ export const Nav = styled.nav`
       font-weight: 900;
       line-height: 12px;
       border-radius: 5px;
-
+      border: none;
       padding: 11px 15px;
 
       text-decoration: none;

@@ -1,14 +1,28 @@
+import { useEffect, useState } from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Nav, ContainerComponent, ButtonHome } from "./styles";
-
+import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 
+import api from "../../services/api";
+
 import LogoTipo from "../../assets/img/logoBruno.jpg";
+import { Nav, ContainerComponent, ButtonHome } from "./styles";
 
 const Navbar = () => {
+  const [isCallWaiter, setIsCallWaiter] = useState(false);
   const location = useLocation();
   const [, slug, numberTable] = location.pathname.split("/");
+  const idTable = useSelector((state) => state.data?.data?.id);
+
+  useEffect(() => {
+    api.get(`mesa_chamar/${idTable}/`).then((response) => {
+      if(response.data.chamado){
+        setIsCallWaiter(true);
+      }
+    })
+  }, [idTable])
 
   if (
     location.pathname === `/${slug}/${numberTable}/pedido/confirmar` ||
@@ -18,6 +32,19 @@ const Navbar = () => {
   ) {
     return null;
   }
+  
+  async function handleCallWaiter(){
+    try{
+      await api.put(`mesa_chamar/${idTable}/`, {
+        chamado: true,
+      });
+
+      setIsCallWaiter(true);
+    }catch(err){
+      console.log(err);
+    }
+  }
+
   return (
     <>
       <ContainerComponent>
@@ -34,7 +61,9 @@ const Navbar = () => {
                   </Link>
                 </ButtonHome>
                 <li>
-                  <Link to="/">Chamar Garçom</Link>
+                  <button onClick={handleCallWaiter} className="callWaiter--button" type="button">
+                    { isCallWaiter ? <>Garçom Chamado</> : <>Chamar Garçom</> }
+                  </button>
                 </li>
               </Nav>
             </Col>
