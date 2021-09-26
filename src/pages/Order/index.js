@@ -13,19 +13,19 @@ function Order() {
 
   useEffect(() => {
     switch (params.id) {
-      case "3":
+      case "1":
         setType("Petiscos");
         break;
-      case "4":
+      case "2":
         setType("Cervejas");
         break;
-      case "5":
+      case "3":
         setType("Caldos");
         break;
-      case "6":
+      case "4":
         setType("Drinks");
         break;
-      case "7":
+      case "5":
         setType("Cachaças");
         break;
       default:

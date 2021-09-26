@@ -15,6 +15,8 @@ function Home() {
     });
   }, []);
 
+  console.log(data);
+
   return (
     <Container>
       <div className="bannerStart">
