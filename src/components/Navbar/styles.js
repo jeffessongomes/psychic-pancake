@@ -20,6 +20,8 @@ export const Nav = styled.nav`
     padding: 15px 0;
 
     a {
+      z-index: 98;
+
       background: #383a3c;
       color: #feca0b;
       font-family: Roboto;
@@ -37,10 +39,28 @@ export const Nav = styled.nav`
         font-size: 12px;
       }
     }
+  }
+`;
+
+export const ButtonHome = styled.div`
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  top: 10px;
+  position: absolute;
+
+  margin-left: -19px;
+
+  z-index: 20;
+
+  a{
+    z-index: 98;
+
     img {
-      top: 10px;
-      position: absolute;
       border: 2px solid #feca0b;
+      height: 90px;
     }
   }
 `;

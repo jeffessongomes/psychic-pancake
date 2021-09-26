@@ -24,6 +24,7 @@ export const Container = styled.div`
           color: #000;
           border-radius: 5px;
           padding: 8px 12px;
+          font-size: 14px;
         }
       }
     }
@@ -38,7 +39,7 @@ export const Container = styled.div`
         margin: 0;
         border: none;
         text-align: center;
-        padding: 14px 0px;
+        padding: 14px 4px;
 
         font-size: 14px;
         font-weight: bold;
@@ -48,6 +49,7 @@ export const Container = styled.div`
           color: #000;
           border-radius: 5px;
           padding: 8px 12px;
+          font-size: 12px;
         }
       }
     }

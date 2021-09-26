@@ -20,6 +20,8 @@ export const ContainerButton = styled.div`
 
     width: 100%;
     text-decoration: none;
+
+    text-transform: capitalize;
   }
 
   border-radius: 5px;

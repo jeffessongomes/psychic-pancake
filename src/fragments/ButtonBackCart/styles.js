@@ -20,7 +20,7 @@ export const ContainerButton = styled.div`
   span {
     font-family: Roboto;
     font-size: 20px;
-    color: #df0a0a;
+    color: #D72323;
     font-weight: bolder;
     position: absolute;
     top: 2px;

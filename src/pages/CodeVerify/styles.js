@@ -25,6 +25,29 @@ export const Container = styled.div`
     border-radius: 5px;
     height: 316px;
 
+    .containerInputCodeVerify{
+      div{
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        width: 100% !important;
+
+        input{
+          background: #383a3c;
+          color: #feca0b;
+          font-weight: bold;
+          font-family: Roboto;
+          font-size: 24px;
+
+          border-radius: 5px;
+          width: 50px !important;
+          height: 60px !important;
+          margin: 0 2px;
+          border: none;
+        }
+      }
+    }
+
     p {
       text-align: center;
       padding: 20px 50px;
@@ -33,15 +56,8 @@ export const Container = styled.div`
       margin: 0;
     }
 
-    span {
-      color: #000000;
-      font-size: 40px;
-      font-weight: 900;
-      letter-spacing: 0.6em;
-      margin-right: -0.6em;
-    }
 
-    a {
+    button {
       background: #383a3c;
       color: #feca0b;
       font-family: Roboto;
@@ -51,7 +67,7 @@ export const Container = styled.div`
       line-height: 12px;
       border-radius: 5px;
 
-      padding: 27px 27px;
+      padding: 0;
 
       margin-top: 30px;
 
@@ -59,7 +75,10 @@ export const Container = styled.div`
       align-items: center;
       justify-content: center;
 
-      text-decoration: none;
+      border: none;
+
+      width: 200px;
+      height: 60px;
     }
 
     small {
@@ -69,6 +88,7 @@ export const Container = styled.div`
       font-size: 14px;
       letter-spacing: 8%;
       line-height: 16px;
+      height: 15px;
     }
   }
 `;

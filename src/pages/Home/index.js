@@ -1,8 +1,20 @@
+import { useEffect, useState } from "react";
+
 import Button from "../../fragments/Button";
+
+import api from "../../services/api";
 
 import { ContainerHome, Container } from "./styles";
 
 function Home() {
+  const [ data, setData ] = useState([]);
+
+  useEffect(() => {
+    api.get('tipo').then((response) => {
+      setData(response.data);
+    });
+  }, []);
+
   return (
     <Container>
       <div className="bannerStart">
@@ -10,11 +22,9 @@ function Home() {
       </div>
       <ContainerHome>
         <div className="Home--option">
-          <Button Title="Petiscos" path="pedido/categoria/6" />
-          <Button Title="Cervejas" path="pedido/categoria/2" />
-          <Button Title="Caldos" path="pedido/categoria/3" />
-          <Button Title="Drinks" path="pedido/categoria/4" />
-          <Button Title="Cachaças" path="pedido/categoria/5" />
+          {data.map((type) => (
+            <Button key={type.id} Title={type.nome} path={`pedido/categoria/${type.slug}/${type.id}`} />
+          ))}
         </div>
       </ContainerHome>
     </Container>

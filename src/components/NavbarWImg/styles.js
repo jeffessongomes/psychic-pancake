@@ -36,6 +36,13 @@ export const Nav = styled.nav`
 
       text-decoration: none;
 
+      width: 150px;
+      height: 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       @media only screen and (max-width: 380px) {
         font-size: 12px;
       }

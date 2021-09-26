@@ -13,20 +13,20 @@ function Order() {
 
   useEffect(() => {
     switch (params.id) {
-      case "2":
-        setType("Cervejas");
-        break;
       case "3":
-        setType("Caldos");
+        setType("Petiscos");
         break;
       case "4":
-        setType("Drinks");
+        setType("Cervejas");
         break;
       case "5":
-        setType("Cachaças");
+        setType("Caldos");
         break;
       case "6":
-        setType("Petiscos");
+        setType("Drinks");
+        break;
+      case "7":
+        setType("Cachaças");
         break;
       default:
         setType("NADA FOI ENCONTRADO!");
@@ -53,7 +53,7 @@ function Order() {
         </div>
       </div>
       <ContainerOrder>
-        <OrderComponent id={params.id} />
+        <OrderComponent id={params.typeSlug} />
       </ContainerOrder>
     </Container>
   );

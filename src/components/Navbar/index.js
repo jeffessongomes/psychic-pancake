@@ -1,10 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Nav, ContainerComponent } from "./styles";
+import { Nav, ContainerComponent, ButtonHome } from "./styles";
 
 import { Link, useLocation } from "react-router-dom";
 
-import LogoTipo from "../../assets/img/logo.png";
+import LogoTipo from "../../assets/img/logoBruno.jpg";
 
 const Navbar = () => {
   const location = useLocation();
@@ -19,25 +19,29 @@ const Navbar = () => {
     return null;
   }
   return (
-    <ContainerComponent>
-      <Container>
-        <Row>
-          <Col lg={12}>
-            <Nav>
-              <li>
-                <Link to="/">Meus Pedidos</Link>
-              </li>
-              <li>
-                <img src={LogoTipo} alt="Logo da empresa" />
-              </li>
-              <li>
-                <Link to="/">Chamar Garçom</Link>
-              </li>
-            </Nav>
-          </Col>
-        </Row>
-      </Container>
-    </ContainerComponent>
+    <>
+      <ContainerComponent>
+        <Container>
+          <Row>
+            <Col lg={12}>
+              <Nav>
+                <li>
+                  <Link to={`/${slug}/${numberTable}/parcial`}>Meus Pedidos</Link>
+                </li>
+                <ButtonHome>
+                  <Link to={`/${slug}/${numberTable}/menu`}>
+                    <img src={LogoTipo} alt="Logo da empresa" />
+                  </Link>
+                </ButtonHome>
+                <li>
+                  <Link to="/">Chamar Garçom</Link>
+                </li>
+              </Nav>
+            </Col>
+          </Row>
+        </Container>
+      </ContainerComponent>
+    </>
   );
 };
 
