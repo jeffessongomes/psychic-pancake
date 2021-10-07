@@ -72,7 +72,6 @@ export default function Routes() {
             component={ShareOrder}
           />
           <Route exact path="/:slug/:numberTable" component={CodeVerify} />
-
         </>
         ) : (
           <>

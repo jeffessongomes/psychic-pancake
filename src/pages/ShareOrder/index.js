@@ -23,10 +23,15 @@ function ShareOrder() {
         </Row>
         <Row>
           <Col lg={12}>
-            <div className="container__insta">
+            <a 
+              href="https://www.instagram.com/botecodobrunoof/" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="container__insta"
+            >
               <FaInstagram size={50} color="#feca0b" />
               <h3>@botecodobrunoof</h3>
-            </div>
+            </a>
           </Col>
         </Row>
         <Row>
