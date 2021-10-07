@@ -12,6 +12,7 @@ import { Nav, ContainerComponent, ButtonHome } from "./styles";
 
 const Navbar = () => {
   const [isCallWaiter, setIsCallWaiter] = useState(false);
+  const [isButtonCallWaiter, setIsButtonCallWaiter] = useState(true);
   const location = useLocation();
   const [, slug, numberTable] = location.pathname.split("/");
   const idTable = useSelector((state) => state.data?.data?.id);
@@ -22,7 +23,15 @@ const Navbar = () => {
         setIsCallWaiter(true);
       }
     })
-  }, [idTable])
+
+    if(
+      location.pathname === `/${slug}/${numberTable}/pedido/compartilhar`
+    ){
+      setIsButtonCallWaiter(false);
+    }else{
+      setIsButtonCallWaiter(true);
+    }
+  }, [idTable, slug, numberTable, location])
 
   if (
     location.pathname === `/${slug}/${numberTable}/pedido/confirmar` ||
@@ -60,11 +69,13 @@ const Navbar = () => {
                     <img src={LogoTipo} alt="Logo da empresa" />
                   </Link>
                 </ButtonHome>
-                <li>
-                  <button onClick={handleCallWaiter} className="callWaiter--button" type="button">
-                    { isCallWaiter ? <>Garçom Chamado</> : <>Chamar Garçom</> }
-                  </button>
-                </li>
+                {isButtonCallWaiter && (
+                  <li>
+                    <button onClick={handleCallWaiter} className="callWaiter--button" type="button">
+                      { isCallWaiter ? <>Garçom Chamado</> : <>Chamar Garçom</> }
+                    </button>
+                  </li>
+                )}
               </Nav>
             </Col>
           </Row>
