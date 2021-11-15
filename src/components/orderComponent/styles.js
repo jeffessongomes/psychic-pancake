@@ -4,7 +4,7 @@ export const ContainerOrder = styled.div`
   background: #feca0b;
   border-radius: 5px;
   padding: 30px 0 20px 0;
-  margin-bottom: 20px;
+  margin-bottom: 90px;
 
   ul {
     margin: 0;
@@ -53,7 +53,7 @@ export const ContainerOrder = styled.div`
           display: flex;
           flex-direction: row;
 
-          input {
+          p {
             width: 50px;
             outline: none;
             border: none;
@@ -62,6 +62,7 @@ export const ContainerOrder = styled.div`
             color: #ffffff;
             font-weight: bold;
             text-align: center;
+            margin: 0;
           }
 
           button {
@@ -79,34 +80,46 @@ export const ContainerOrder = styled.div`
     }
   }
 
-  .request--btn {
+  .containerRequest__btn{
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
     background: #383a3c;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-
-    color: #feca0b;
-    text-transform: uppercase;
-    outline: none;
-    border: none;
-
-    padding: 0px;
-    width: 70%;
-    border-radius: 5px;
-    margin-top: 26px;
-
-    height: 60px;
+    padding: 7px 0;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    flex-direction: row;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      
+    .request__btn {
+      background: #FECA0B;
 
-  .messageError {
-    font-weight: bold;
-    color: #e74c3c;
+      border: none;
+
+      flex: 1;
+      color: #383A3C;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .request__btn--order{
+      margin-left: 2px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .request__btn--back{
+      margin-right: 2px;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .messageError {
+      font-weight: bold;
+      color: #e74c3c;
+    }
   }
 `;

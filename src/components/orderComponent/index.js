@@ -5,7 +5,7 @@ import { addProductToOrder } from "../../store/modules/order/actions";
 import api from "../../services/api";
 
 import { ContainerOrder } from "./styles";
-import { Redirect, useParams } from "react-router-dom";
+import { Link, Redirect, useParams } from "react-router-dom";
 
 const OrderComponent = ({ id }) => {
   const [data, setData] = useState([]);
@@ -70,17 +70,6 @@ const OrderComponent = ({ id }) => {
     setData([...alterData]);
   };
 
-  const handleAlterProductToOrderTemporary = (e, product) => {
-    const productInOrderTemporaryIndex = data.findIndex(
-      (item) => item.id === product.id
-    );
-
-    let alterData = data;
-    alterData[productInOrderTemporaryIndex].quantity = e.target.value;
-
-    setData([...alterData]);
-  };
-
   if (isOrderSend) {
     return <Redirect to={`/${slug}/${numberTable}/pedido/confirmar`} />;
   }
@@ -101,12 +90,9 @@ const OrderComponent = ({ id }) => {
                 >
                   -
                 </button>
-                <input
-                  type="number"
-                  min="0"
-                  value={item.quantity}
-                  onChange={(e) => handleAlterProductToOrderTemporary(e, item)}
-                />
+                <p>
+                  {item.quantity}
+                </p>
                 <button
                   type="button"
                   onClick={() => handleAddProductToOrderTemporary(item)}
@@ -118,14 +104,23 @@ const OrderComponent = ({ id }) => {
           </li>
         ))}
       </ul>
-      <button
-        type="button"
-        className="request--btn"
-        onClick={() => handleAddProductToOrder()}
-      >
-        Pedir
-      </button>
+
       {isError && <p className="messageError">Nenhum item adicionado</p>}
+      <div className="containerRequest__btn">
+        <Link
+          className="request__btn request__btn--back"
+          to={`/${slug}/${numberTable}/menu`}
+        >
+          Voltar
+        </Link>
+        <button
+          type="button"
+          className="request__btn request__btn--order"
+          onClick={() => handleAddProductToOrder()}
+        >
+          Pedir
+        </button>
+      </div>
     </ContainerOrder>
   );
 };

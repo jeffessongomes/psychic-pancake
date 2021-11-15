@@ -5,6 +5,54 @@ export const Container = styled.div`
 
   padding: 0 20px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .partial__buttonBack{
+    position: fixed;
+    bottom: 20px;
+    width: 150px !important;
+
+    a{
+      padding: 20px 0;
+    }
+  }
+
+  .navOptionOrders{
+    ul{
+      display: flex;
+      justify-content: center;
+
+      li{
+        list-style: none;
+        margin: 0;
+
+        button{
+          background-color: #383A3C;
+          border: none;
+          box-shadow: 0px 2px 15px rgba(0,0,0,0.3);
+          padding: 5px 20px;
+          color: #feca0b;
+          font-weight: bold;
+
+          &.navOptionOrders__buttonLeft{
+            border-radius: 5px 0 0 5px;
+          }
+
+          &.navOptionOrders__buttonRight{
+            border-radius: 0 5px 5px 0;
+          }
+
+          &.navOptionOrders--active{
+            background-color: #feca0b;
+            color: #383A3C;
+          }
+        }
+      }
+    }
+  }
+
   table {
     width: 100%;
     border-collapse: separate;
