@@ -28,6 +28,9 @@ function Order() {
       case "5":
         setType("Cervejas");
         break;
+      case "6":
+        setType("Bebidas sem álcool");
+        break;
       default:
         setType("NADA FOI ENCONTRADO!");
     }
