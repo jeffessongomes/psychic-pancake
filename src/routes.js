@@ -1,8 +1,8 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
-import {useSelector, useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation, Redirect } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Order from "./pages/Order";
@@ -24,61 +24,67 @@ export default function Routes() {
 
   const location = useLocation();
 
-  useEffect(() => {
-    api.post("verificar_token/", {
-      token: token || "noToken",
-    }).then((response) => {
-      if(token !== undefined){
-        if(response.data.estado){
-          setAuthLogin(true);
-        }else{
-          dispatch(removeDataToTable())
-        }
-      }
-    })
+  const [, slug, numberTable] = location.pathname.split("/");
 
+  useEffect(() => {
+    api
+      .post("verificar_token/", {
+        token: token || "noToken",
+      })
+      .then((response) => {
+        if (token !== undefined) {
+          if (response.data.estado) {
+            setAuthLogin(true);
+          } else {
+            dispatch(removeDataToTable());
+          }
+        }
+      });
   }, [location.pathname, token, dispatch]);
 
-  
   return (
     <>
-      { 
-        authLogin && (
+      {authLogin && (
         <>
           <Navbar />
           <ButtonBackCart />
         </>
-        )
-      }
-      
+      )}
+
       <Switch>
         {authLogin ? (
-        <>
-          <Route exact path="/:slug/:numberTable/parcial" component={Partial} />
-          <Route exact path="/:slug/:numberTable/menu" component={Home} />
-          <Route
-            exact
-            path="/:slug/:numberTable/pedido/categoria/:typeSlug/:id"
-            component={Order}
-          />
-          <Route
-            exact
-            path="/:slug/:numberTable/pedido/confirmar"
-            component={ConfirmOrder}
-          />
-          <Route
-            exact
-            path="/:slug/:numberTable/pedido/compartilhar"
-            component={ShareOrder}
-          />
-          <Route exact path="/:slug/:numberTable" component={CodeVerify} />
-        </>
+          <>
+            {token ? <Redirect to={`/${slug}/${numberTable}/menu`} /> : null}
+            <>
+              <Route
+                exact
+                path="/:slug/:numberTable/parcial"
+                component={Partial}
+              />
+              <Route exact path="/:slug/:numberTable/menu" component={Home} />
+              <Route
+                exact
+                path="/:slug/:numberTable/pedido/categoria/:typeSlug/:id"
+                component={Order}
+              />
+              <Route
+                exact
+                path="/:slug/:numberTable/pedido/confirmar"
+                component={ConfirmOrder}
+              />
+              <Route
+                exact
+                path="/:slug/:numberTable/pedido/compartilhar"
+                component={ShareOrder}
+              />
+              <Route exact path="/:slug/:numberTable" component={CodeVerify} />
+            </>
+          </>
         ) : (
           <>
             <Route exact path="/:slug/:numberTable" component={CodeVerify} />
           </>
         )}
-        
       </Switch>
     </>
   );
